@@ -2,19 +2,24 @@
 
 for Submission at the Blockchain Hackathon 
 Encode chain-abstraction-2024
+
 =====================================
 The DApp will allow patients to:
 Book appointments with healthcare providers.
 View real-time availability of doctors.
 Manage medical records securely on the blockchain.
 Connect their wallets for payment and identity verification.
+
+=====================================
+
 Key Components
 1. User Interface (UI)
-Develop a user-friendly interface using frameworks like React or Vue.js.
+Develop a user-friendly interface using frameworks like React
 Include features for:
 User Registration/Login: Patients can register using their email and connect their wallets (MetaMask for EVM, Phantom for Solana).
 Doctor Search: Allow patients to search doctors by specialty, availability, or location.
 Appointment Booking: Display available slots and allow booking.
+
 2. Smart Contracts
 Use Solidity for EVM and Rust for Solana to create smart contracts that handle:
 Appointment Management: Functions to book, cancel, and view appointments.
