@@ -57,6 +57,15 @@ To set up the Amalgam DApp locally, follow these steps:
 - **Insurance Payments**: Insurance companies can pay hospitals for treatment claims.
 - **Pharmaceutical Integration**: Pharmaceutical companies can provide drug information and pricing.
 
+## Smart Contracts
+
+The DApp consists of multiple smart contracts that facilitate various functionalities:
+
+- InsuranceContract: Manages insurance policies and payments.
+- EMRContract: Handles creation of EMR NFTs.
+- HospitalContract: Manages hospital claims and payments.
+- PharmaceuticalContract: Manages drug prescriptions and payments.
+
 ## Workflow Diagram
 
 ```plaintext
@@ -98,6 +107,9 @@ To set up the Amalgam DApp locally, follow these steps:
                                |  |                     |
                                +--+---------------------+
 
+
+```
+
 ## Conclusion
 
 Amalgam aims to revolutionize the way EMR data is shared in the healthcare sector by leveraging blockchain technology for enhanced security and interoperability. Join us in building a future where patient data is shared securely and efficiently across medical institutions.
@@ -105,4 +117,3 @@ Amalgam aims to revolutionize the way EMR data is shared in the healthcare secto
 ## Acknowledgments
 
 Special thanks to Encode Club, Particle Network, and all participants of the Blockchain Hackathon for their support and inspiration in developing this project.
-
