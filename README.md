@@ -50,6 +50,54 @@ To set up the Amalgam DApp locally, follow these steps:
 - **Healthcare Providers**: Securely share patient records with specialists while maintaining patient confidentiality.
 - **Patients**: Control access to their medical records and grant permissions to healthcare providers as needed.
 
+## Features
+
+- **Insurance Management**: Patients can purchase insurance policies directly through the DApp.
+- **EMR as NFTs**: Doctors can create EMRs as NFTs, providing proof of patient diagnoses and treatments.
+- **Insurance Payments**: Insurance companies can pay hospitals for treatment claims.
+- **Pharmaceutical Integration**: Pharmaceutical companies can provide drug information and pricing.
+
+## Workflow Diagram
+
+```plaintext
++----------------+          +---------------------+
+|                |          |                     |
+|    Patients     +--------->  Insurance Company   |
+|                |          |                     |
++----------------+          +---------------------+
+         |                           ^
+         |                           |
+         |                           |
+         v                           |
++----------------+                   |
+|                |                   |
+|     Doctors    +-------------------+
+|                |                   |
++----------------+                   |
+         |                           |
+         |                           |
+         v                           |
++----------------+                   |
+|                |                   |
+|    EMR NFT     +-------------------+
+|                |                   |
++----------------+                   |
+         |                           |
+         v                           |
++----------------+                   |
+|                |                   |
+|    Hospitals    +<-----------------+
+|                |                   |
++----------------+                   |
+         ^                           |
+         |                           |
+         |                           v
+         +---------------------+  +---------------------+
+                               |  |                     |
+                               |  | Pharmaceutical Co.  |
+                               |  |                     |
+                               +--+---------------------+
+
 ## Conclusion
 
 Amalgam aims to revolutionize the way EMR data is shared in the healthcare sector by leveraging blockchain technology for enhanced security and interoperability. Join us in building a future where patient data is shared securely and efficiently across medical institutions.
@@ -57,3 +105,4 @@ Amalgam aims to revolutionize the way EMR data is shared in the healthcare secto
 ## Acknowledgments
 
 Special thanks to Encode Club, Particle Network, and all participants of the Blockchain Hackathon for their support and inspiration in developing this project.
+
