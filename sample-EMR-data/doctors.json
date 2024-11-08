@@ -1,0 +1,54 @@
+{
+    "doctors": [
+        {
+            "id": "1",
+            "name": "Dr. John Smith",
+            "specialty": "Cardiology"
+        },
+        {
+            "id": "2",
+            "name": "Dr. Emily Johnson",
+            "specialty": "Dermatology"
+        },
+        {
+            "id": "3",
+            "name": "Dr. Michael Brown",
+            "specialty": "Pediatrics"
+        },
+        {
+            "id": "4",
+            "name": "Dr. Sarah Davis",
+            "specialty": "Neurology"
+        },
+        {
+            "id": "5",
+            "name": "Dr. David Wilson",
+            "specialty": "Orthopedic Surgery"
+        },
+        {
+            "id": "6",
+            "name": "Dr. Jessica Garcia",
+            "specialty": "Gastroenterology"
+        },
+        {
+            "id": "7",
+            "name": "Dr. William Martinez",
+            "specialty": "Psychiatry"
+        },
+        {
+            "id": "8",
+            "name": "Dr. Linda Rodriguez",
+            "specialty": "Emergency Medicine"
+        },
+        {
+            "id": "9",
+            "name": "Dr. James Lee",
+            "specialty": "Endocrinology"
+        },
+        {
+            "id": "10",
+            "name": "Dr. Patricia Hernandez",
+            "specialty": "Ophthalmology"
+        }
+    ]
+}
