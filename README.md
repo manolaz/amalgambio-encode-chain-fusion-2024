@@ -57,6 +57,15 @@ To set up the Amalgam DApp locally, follow these steps:
 - **Insurance Payments**: Insurance companies can pay hospitals for treatment claims.
 - **Pharmaceutical Integration**: Pharmaceutical companies can provide drug information and pricing.
 
+## Smart Contracts
+
+The DApp consists of multiple smart contracts that facilitate various functionalities:
+
+- InsuranceContract: Manages insurance policies and payments.
+- EMRContract: Handles creation of EMR NFTs.
+- HospitalContract: Manages hospital claims and payments.
+- PharmaceuticalContract: Manages drug prescriptions and payments.
+
 ## Workflow Diagram
 
 ```plaintext
