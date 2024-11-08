@@ -1,0 +1,120 @@
+{
+    "resourceType": "Patient",
+    "id": "patient-001",
+    "name": [
+        {
+            "use": "official",
+            "family": "Doe",
+            "given": [
+                "John"
+            ]
+        }
+    ],
+    "gender": "male",
+    "birthDate": "1985-05-15",
+    "address": [
+        {
+            "line": [
+                "123 Main St"
+            ],
+            "city": "Anytown",
+            "state": "CA",
+            "postalCode": "90210"
+        }
+    ],
+    "contact": [
+        {
+            "relationship": [
+                {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                            "code": "NOK",
+                            "display": "Next of Kin"
+                        }
+                    ]
+                }
+            ],
+            "name": {
+                "family": "Smith",
+                "given": [
+                    "Jane"
+                ]
+            },
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "+1-555-555-5555"
+                }
+            ]
+        }
+    ],
+    "condition": [
+        {
+            "resourceType": "Condition",
+            "id": "condition-001",
+            "subject": {
+                "reference": "#patient-001"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "431855005",
+                        "display": "Lung disease"
+                    }
+                ],
+                "text": "Chronic Obstructive Pulmonary Disease (COPD)"
+            },
+            "status": "active",
+            "onsetDateTime": "2023-01-10",
+            "abatementDateTime": null,
+            "evidence": [
+                {
+                    "code": {
+                        "coding": [
+                            {
+                                "system": "",
+                                "code": "",
+                                "display": ""
+                            }
+                        ],
+                        "text": ""
+                    },
+                    "detail": [
+                        {
+                            "reference": "#observation-001"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "observation": [
+        {
+            "resourceType": "Observation",
+            "id": "#observation-001",
+            "subject": {
+                "reference": "#patient-001"
+            },
+            "code": {
+                "coding": [
+                    {
+                        "system": "",
+                        "code": "",
+                        "display": ""
+                    }
+                ],
+                "text": "Lung Function Test"
+            },
+            "valueQuantity": {
+                "value": 60,
+                "unit": "%",
+                "system": "",
+                "code": "%"
+            },
+            "effectiveDateTime": "2023-01-15T14: 00: 00",
+            "status": "final"
+        }
+    ]
+}
