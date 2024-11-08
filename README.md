@@ -1,40 +1,59 @@
 # Amalgam DApp Overview
 
-for Submission at the Blockchain Hackathon 
-Encode chain-abstraction-2024
+## Introduction
 
-=====================================
-The DApp will allow patients to:
-Book appointments with healthcare providers.
-View real-time availability of doctors.
-Manage medical records securely on the blockchain.
-Connect their wallets for payment and identity verification.
+Amalgam is a decentralized application (DApp) designed for secure sharing of Electronic Medical Records (EMR) utilizing blockchain technology. This project is submitted for the Blockchain Hackathon Encode Chain-Abstraction 2024, aiming to enhance data privacy and interoperability in healthcare.
 
-=====================================
+## Features
 
-Key Components
-1. User Interface (UI)
-Develop a user-friendly interface using frameworks like React
-Include features for:
-User Registration/Login: Patients can register using their email and connect their wallets (MetaMask for EVM, Phantom for Solana).
-Doctor Search: Allow patients to search doctors by specialty, availability, or location.
-Appointment Booking: Display available slots and allow booking.
+- **Secure Data Sharing**: Utilizes advanced encryption techniques and proxy re-encryption to ensure that EMR data remains confidential during sharing between authorized users.
+- **Chain Abstraction**: Implements Particle Network's chain abstraction technology to simplify interactions across multiple blockchains, allowing seamless access to EMR data without the need for managing multiple wallets or chains.
+- **User-Friendly Interface**: Designed with a focus on user experience, enabling healthcare professionals to easily access and share patient records while maintaining compliance with privacy regulations.
 
-2. Smart Contracts
-Use Solidity for EVM and Rust for Solana to create smart contracts that handle:
-Appointment Management: Functions to book, cancel, and view appointments.
-Data Storage: Store patient and appointment data immutably on the blockchain.
-Example functions might include:
-text
-function bookAppointment(uint256 doctorId, uint256 timeSlot) public returns (bool);
-function cancelAppointment(uint256 appointmentId) public returns (bool);
+## Technology Stack
 
-3. Blockchain Integration
-Implement the OKTO SDK to facilitate wallet connections and transactions.
-Ensure compatibility with both Solana and EVM chains by using appropriate libraries (e.g., Web3.js for EVM, Solana Web3.js for Solana).
-4. Backend Services
-Use a decentralized storage solution like IPFS to store non-sensitive data (e.g., appointment history).
-If sensitive data needs to be stored off-chain, consider traditional databases with encryption.
-5. Payment Processing
-Integrate payment gateways that allow users to pay for services using cryptocurrencies or traditional payment methods.
-Smart contracts can handle payment confirmations post-appointment booking.
+- **Blockchain**: Built on a robust blockchain framework that supports decentralized storage and secure transactions.
+- **LightProtocol**: Utilized for handling encrypted data sharing, ensuring that only authorized parties can decrypt and access sensitive information.
+- **Particle Network**: Leverages account-level chain abstraction to enable smooth interactions between different blockchains, enhancing the DApp's scalability and usability.
+
+## Getting Started
+
+To set up the Amalgam DApp locally, follow these steps:
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/yourusername/amalgam-dapp.git
+   cd amalgam-dapp
+   ```
+
+2. **Install Dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables**
+   Create a `.env` file in the root directory and add your blockchain node URLs and other necessary configurations.
+
+4. **Run the DApp**
+
+   ```bash
+   npm start
+   ```
+
+5. **Access the DApp**
+   Open your browser and navigate to `http://localhost:3000` to start using the Amalgam DApp.
+
+## Use Cases
+
+- **Healthcare Providers**: Securely share patient records with specialists while maintaining patient confidentiality.
+- **Patients**: Control access to their medical records and grant permissions to healthcare providers as needed.
+
+## Conclusion
+
+Amalgam aims to revolutionize the way EMR data is shared in the healthcare sector by leveraging blockchain technology for enhanced security and interoperability. Join us in building a future where patient data is shared securely and efficiently across medical institutions.
+
+## Acknowledgments
+
+Special thanks to Encode Club, Particle Network, and all participants of the Blockchain Hackathon for their support and inspiration in developing this project.
