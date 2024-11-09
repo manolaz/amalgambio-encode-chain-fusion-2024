@@ -4,6 +4,11 @@
 
 Amalgam is a decentralized application designed to streamline the management of Electronic Medical Records (EMRs) using blockchain technology. This DApp allows patients to purchase insurance, enables doctors to create EMR NFTs, and facilitates payments from insurance companies to hospitals for treatment events and drug plans. The architecture includes multiple smart contracts to manage interactions between patients, doctors, insurance companies, hospitals, and pharmaceutical companies.
 
+## Use Cases
+
+- **Healthcare Providers**: Securely share patient records with specialists while maintaining patient confidentiality.
+- **Patients**: Control access to their medical records and grant permissions to healthcare providers as needed.
+
 ## Features
 
 - **Secure Data Sharing**: Utilizes advanced encryption techniques and proxy re-encryption to ensure that EMR data remains confidential during sharing between authorized users.
@@ -37,25 +42,35 @@ To set up the Amalgam DApp locally, follow these steps:
 1. **Install Dependencies**
 
    ```bash
-   npm install
+   bun install
    ```
 
 2. **Configure Environment Variables**
    Create a `.env` file in the root directory and add your blockchain node URLs and other necessary configurations.
+   [Particle Project](https://dashboard.particle.network/) Config, learn more info:  
+
+   - NEXT_PUBLIC_PROJECT_ID=
+   - NEXT_PUBLIC_CLIENT_KEY=
+   - NEXT_PUBLIC_APP_ID=
+
+   [WalletConnect Project Id, learn more info:](https://cloud.walletconnect.com/)>
+
+   - NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=
+
+   ### BUILD Project
+
+   ```bash
+      bun run build
+   ```
 
 3. **Run the DApp**
 
    ```bash
-   npm start
+   bun start
    ```
 
 4. **Access the DApp**
    Open your browser and navigate to `http://localhost:3000` to start using the Amalgam DApp.
-
-## Use Cases
-
-- **Healthcare Providers**: Securely share patient records with specialists while maintaining patient confidentiality.
-- **Patients**: Control access to their medical records and grant permissions to healthcare providers as needed.
 
 ## Smart Contracts
 
