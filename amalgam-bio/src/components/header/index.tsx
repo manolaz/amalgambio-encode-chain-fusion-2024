@@ -1,4 +1,4 @@
-import logo from '@/assets/images/logo.png';
+import logo from '@/assets/images/AmalgamBio.jpg';
 import { ConnectButton } from '@particle-network/connectkit';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -11,7 +11,7 @@ export default function Header() {
       <nav className={styles.nav}>
         <div className={styles['nav-start']}>
           <div className={styles['nav-start-slogan']}>AmalgamBio: healthcare social network</div>
-          <Image src="https://amalgamenergy.com/Amalgam_energy_2.png" width={36} height={36} alt='logo'></Image>
+          <Image src={logo} width={36} height={36} alt='logo'></Image>
         </div>
         <div className={styles['nav-content']}>
           <Link
