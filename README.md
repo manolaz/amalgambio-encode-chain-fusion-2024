@@ -66,7 +66,7 @@ To set up the Amalgam DApp locally, follow these steps:
 3. **Run the DApp**
 
    ```bash
-   bun start
+   bun run start
    ```
 
 4. **Access the DApp**
