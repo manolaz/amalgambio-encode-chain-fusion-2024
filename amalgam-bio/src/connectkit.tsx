@@ -77,7 +77,6 @@ supportChains.push(mainnet, storyTestnet, base, arbitrum, polygon, lineaSepolia,
 // evm end
 
 
-
 const config = createConfig({
   projectId,
   clientKey,
