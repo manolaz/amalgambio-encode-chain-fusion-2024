@@ -13,7 +13,7 @@ import { EntryPosition, wallet } from '@particle-network/connectkit/wallet';
 import { aa } from '@particle-network/connectkit/aa';
 // aa end
 // evm start
-import { solana, arbitrum, base, lineaSepolia, mainnet, polygon, sepolia, baseSepolia, arbitrumSepolia, avalancheFuji, bscTestnet, optimismSepolia, polygonAmoy, arbitrumNova } from '@particle-network/connectkit/chains';
+import { solana, arbitrum, base, lineaSepolia, mainnet, polygon, polygonMumbai, sepolia, baseSepolia, arbitrumSepolia, avalancheFuji, bscTestnet, optimismSepolia, polygonAmoy, arbitrumNova } from '@particle-network/connectkit/chains';
 import { evmWalletConnectors } from '@particle-network/connectkit/evm';
 // evm end
 
@@ -50,12 +50,30 @@ const storyTestnet = defineChain({
   testnet: true,
 });
 
-
+// Define the Polygon Amoy Testnet testnet
+const polygonAmoyTestnet = defineChain({
+  id: 80002,
+  name: "Polygon Amoy Testnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "POLYGON",
+    symbol: "POL",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc-amoy.polygon.technology/"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://amoy.polygonscan.com/" },
+  },
+  testnet: true,
+});
 
 
 const supportChains: Chain[] = [];
 // evm start
-supportChains.push(mainnet, storyTestnet, base, arbitrum, polygon, lineaSepolia);
+supportChains.push(mainnet, storyTestnet, base, arbitrum, polygon, lineaSepolia, polygonMumbai, polygonAmoyTestnet);
 // evm end
 
 
@@ -108,7 +126,7 @@ const config = createConfig({
     // aa config end
 
   ],
-  chains: [mainnet, solana, storyTestnet, arbitrum, base, lineaSepolia, polygon, sepolia, baseSepolia, arbitrumSepolia, avalancheFuji, bscTestnet, optimismSepolia, polygonAmoy, arbitrumNova],
+  chains: [mainnet, solana, storyTestnet, polygonMumbai, polygonAmoyTestnet, arbitrum, base, lineaSepolia, polygon, sepolia, baseSepolia, arbitrumSepolia, avalancheFuji, bscTestnet, optimismSepolia, arbitrumNova],
 });
 
 // Wrap your application with this component.
