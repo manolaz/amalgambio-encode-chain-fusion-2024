@@ -5,7 +5,7 @@ import Header from '@/components/header';
 import { useAccount } from '@particle-network/connectkit';
 import { isEVMChain } from '@particle-network/connectkit/chains';
 import Image from 'next/image';
-import Demo from './components/demo';
+import AmalgamDappOverview from './components/demo';
 import styles from './index.module.css';
 
 export default function Index() {
@@ -16,7 +16,7 @@ export default function Index() {
       <Header />
       <main className={styles['main-content']}>
         {isConnected && chain && isEVMChain(chain) ? (
-          <Demo />
+          <AmalgamDappOverview />
         ) : (
           <Image sizes='100%' src={demoImage} style={{ width: '100%' }} alt='demo' />
         )}

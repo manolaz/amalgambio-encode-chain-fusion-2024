@@ -10,8 +10,8 @@ export default function Header() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles['nav-start']}>
-          <div className={styles['nav-start-slogan']}>particle network</div>
-          <Image src={logo} width={36} height={36} alt='logo'></Image>
+          <div className={styles['nav-start-slogan']}>AmalgamBio: healthcare social network</div>
+          <Image src="https://amalgamenergy.com/Amalgam_energy_2.png" width={36} height={36} alt='logo'></Image>
         </div>
         <div className={styles['nav-content']}>
           <Link
@@ -19,15 +19,6 @@ export default function Header() {
             target='_blank'
           >
             <div className={styles['nav-item']}>Docs</div>
-          </Link>
-          <Link href='https://github.com/Particle-Network' target='_blank'>
-            <div className={styles['nav-item']}>Github</div>
-          </Link>
-          <Link href='https://particle.network/' target='_blank'>
-            <div className={styles['nav-item']}>About</div>
-          </Link>
-          <Link href='https://demo.particle.network/' target='_blank'>
-            <div className={styles['nav-item']}>Demo</div>
           </Link>
         </div>
         <div className={styles['nav-end']}>
