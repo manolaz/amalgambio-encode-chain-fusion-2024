@@ -5,6 +5,7 @@ import React from 'react';
 import { ConnectKitProvider, createConfig } from '@particle-network/connectkit';
 import { authWalletConnectors } from '@particle-network/connectkit/auth';
 import type { Chain } from '@particle-network/connectkit/chains';
+import { defineChain } from "@particle-network/connectkit/chains";
 // embedded wallet start
 import { EntryPosition, wallet } from '@particle-network/connectkit/wallet';
 // embedded wallet end
@@ -28,10 +29,35 @@ if (!projectId || !clientKey || !appId) {
   throw new Error('Please configure the Particle project in .env first!');
 }
 
+
+// Define the Story testnet
+const storyTestnet = defineChain({
+  id: 1513,
+  name: "Story Testnet",
+  nativeCurrency: {
+    decimals: 18,
+    name: "IP",
+    symbol: "IP",
+  },
+  rpcUrls: {
+    default: {
+      http: ["https://testnet.storyrpc.io/"],
+    },
+  },
+  blockExplorers: {
+    default: { name: "Explorer", url: "https://iliad.explorer.story.foundation/" },
+  },
+  testnet: true,
+});
+
+
+
+
 const supportChains: Chain[] = [];
 // evm start
-supportChains.push(mainnet, base, arbitrum, polygon, lineaSepolia);
+supportChains.push(mainnet, storyTestnet, base, arbitrum, polygon, lineaSepolia);
 // evm end
+
 
 
 const config = createConfig({
@@ -82,7 +108,7 @@ const config = createConfig({
     // aa config end
 
   ],
-  chains: [mainnet, solana, arbitrum, base, lineaSepolia, polygon, sepolia, baseSepolia, arbitrumSepolia, avalancheFuji, bscTestnet, optimismSepolia, polygonAmoy, arbitrumNova],
+  chains: [mainnet, solana, storyTestnet, arbitrum, base, lineaSepolia, polygon, sepolia, baseSepolia, arbitrumSepolia, avalancheFuji, bscTestnet, optimismSepolia, polygonAmoy, arbitrumNova],
 });
 
 // Wrap your application with this component.
