@@ -1,7 +1,7 @@
 {
   "canisters": {
     "basic_dao_backend": {
-      "main": "src/basic_dao_backend/main.mo",
+      "main": "src/basic_dao_backend/medical_records_nft.mo",
       "type": "motoko"
     },
     "basic_dao_frontend": {
