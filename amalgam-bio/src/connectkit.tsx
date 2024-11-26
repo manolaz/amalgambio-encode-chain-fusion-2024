@@ -50,31 +50,14 @@ const storyTestnet = defineChain({
   testnet: true,
 });
 
-// Define the Polygon Amoy Testnet testnet
-const polygonAmoyTestnet = defineChain({
-  id: 80002,
-  name: "Polygon Amoy Testnet",
-  nativeCurrency: {
-    decimals: 18,
-    name: "POLYGON",
-    symbol: "POL",
-  },
-  rpcUrls: {
-    default: {
-      http: ["https://rpc-amoy.polygon.technology/"],
-    },
-  },
-  blockExplorers: {
-    default: { name: "Explorer", url: "https://amoy.polygonscan.com/" },
-  },
-  testnet: true,
-});
+
 
 
 const supportChains: Chain[] = [];
 // evm start
-supportChains.push(mainnet, storyTestnet, base, arbitrum, polygon, lineaSepolia, polygonMumbai, polygonAmoyTestnet);
+supportChains.push(mainnet, storyTestnet, base, arbitrum, polygon, lineaSepolia);
 // evm end
+
 
 
 const config = createConfig({
@@ -125,7 +108,7 @@ const config = createConfig({
     // aa config end
 
   ],
-  chains: [mainnet, solana, storyTestnet, polygonMumbai, polygonAmoyTestnet, arbitrum, base, lineaSepolia, polygon, sepolia, baseSepolia, arbitrumSepolia, avalancheFuji, bscTestnet, optimismSepolia, arbitrumNova],
+  chains: [mainnet, solana, storyTestnet, arbitrum, base, lineaSepolia, polygon, sepolia, baseSepolia, arbitrumSepolia, avalancheFuji, bscTestnet, optimismSepolia, polygonAmoy, arbitrumNova],
 });
 
 // Wrap your application with this component.
